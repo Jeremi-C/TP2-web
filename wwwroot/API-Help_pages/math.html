@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/site.css" />
+    <title>Math help</title>
+</head>
+<body>
+    <div>Cette section est fait par Jérémi Chrétien.</div>
+    <div>La base du serveur MVC a été fait par Nicolas Chourot</div>
+    <div style="margin:auto; width:90%">
+        <h1>Aide pour l'API math</h1>
+
+        <h2>Endpoint: /api/maths</h2>
+
+        <h3>Paramètres:</h3>
+        <ul>
+            <li><strong>op</strong>: L'opérateur (+, -, *, /, %, !, p, np)</li>
+            <li><strong>x</strong>: premier paramètre</li>
+            <li><strong>y</strong>: deuxième paramètre</li>
+            <li><strong>n</strong>: seul paramètre</li>
+        </ul>
+
+        <h3>Réponse:</h3>
+        <p>la réponse est objet JSON avec ces paramètres:</p>
+        <ul>
+            <li><strong>op</strong>: l'opérateur</li>
+            <li><strong>x</strong>: premier paramètre</li>
+            <li><strong>y</strong>: deuxième paramètre</li>
+            <li><strong>value</strong>: le résultat de l'opération</li>
+        </ul>
+
+        <h3>Example:</h3>
+        <p><strong>Addition:</strong> /api/maths?op=+&x=3&y=2</p>
+        <p>Réponse:</p>
+        <p>
+            {
+            "op": "+",
+            "x": "3",
+            "y": "2",
+            "value": 5
+            }
+        </p>
+        <p><strong>Division:</strong> /api/maths?op=/&x=7&y=2</p>
+        <p>Réponse:</p>
+        <p>
+            {
+            "op": "/",
+            "x": "7",
+            "y": "2",
+            "value": 3.5
+            }
+        </p>
+        <p><strong>Modulo:</strong> /api/maths?op=%&x=7&y=2</p>
+        <p>Réponse:</p>
+        <p>
+            {
+            "op": "%",
+            "x": "7",
+            "y": "2",
+            "value": 1
+            }
+        </p>
+        <p><strong>Factoriel:</strong> /api/maths?op=!&n=-2</p>
+        <p>Réponse:</p>
+        <p>
+            {
+            "op": "!",
+            "n": "-2",
+            "value": "Factorial must be positive"
+            }
+        </p>
+        <p><strong>prime:</strong> /api/maths?op=p&n=7</p>
+        <p>Réponse:</p>
+        <p>
+            {
+            "op": "p",
+            "n": "7",
+            "value": true
+            }
+        </p>
+    </div>
+</body>
+</html>
